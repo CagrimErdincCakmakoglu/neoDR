@@ -1,0 +1,1493 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.header-1-content {
+    display: flex;
+    justify-content: center;
+    height: 1000000px;
+    background-color: #044794;
+    height: 60px;
+}
+
+.add-part {
+    height: 30px;
+    background-color: #D1938D;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* -- HEADER 1 CONTENT BÝTÝÞ -- */
+/* -- HEADER 2 CONTENT BAÞLANGIÇ -- */
+
+
+.vip {
+    padding-top: 8.5px;
+    text-align: center;
+}
+
+.vip-member {
+    font-family: 'SF Pro Display', arial, sans-serif;
+    font-size: 12px;
+    font-weight: bolder !important;
+    line-height: 1.5;
+    text-decoration: none !important;
+    border: 1px solid #B3B8BC;
+    background-color: #414e58;
+    border-radius: 2px;
+    color: white !important;
+    padding: 3px 3px;
+}
+
+    .vip-member:hover {
+        border: 1px solid red;
+        background-color: #044794;
+    }
+
+        .vip-member:hover .bx {
+            color: yellow;
+        }
+
+.navbar-list {
+    display: flex !important;
+    list-style-type: none !important;
+    gap: 15px !important;
+    color: black;
+    font-size: 12px;
+    font-weight: bolder !important;
+    line-height: 1.5;
+    font-family: 'SF Pro Display', arial, sans-serif;
+    margin-top: 14.5px;
+    margin-left: 29.1px;
+}
+
+.list-items {
+    color: black !important;
+}
+
+    .list-items:hover {
+        color: #074793 !important;
+    }
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.call-center-list {
+    display: flex !important;
+    list-style-type: none !important;
+    margin-top: 5px;
+    margin-left: 46px;
+    text-align: center;
+}
+
+.call-button {
+    cursor: pointer;
+}
+
+.icon-support {
+    margin-top: 5px;
+    color: #074793 !important;
+    width: 30px;
+    height: auto;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.call-number {
+    font-size: 12px;
+    font-weight: bolder !important;
+    line-height: 1.5;
+    font-family: 'SF Pro Display', arial, sans-serif;
+}
+
+.number-item {
+    margin-top: 3.7px;
+    margin-left: -0.7px;
+}
+
+    .number-item:hover {
+        color: #074793 !important;
+    }
+
+.message-button {
+    cursor: pointer;
+}
+
+.send-message-list {
+    display: flex !important;
+    list-style-type: none !important;
+    margin-top: 5px;
+    margin-left: -44px;
+    text-align: center;
+}
+
+.bxl-whatsapp {
+    margin-top: 1.3px;
+    font-size: 32px;
+    color: #044794;
+}
+
+.whatsapp-text {
+    font-size: 12px;
+    font-weight: bolder !important;
+    line-height: 1.5;
+    font-family: 'SF Pro Display', arial, sans-serif;
+}
+
+.material3 {
+    margin-top: 3.7px;
+    margin-left: -0.7px;
+}
+
+    .material3:hover {
+        color: #074793 !important;
+    }
+
+/* --- HEADER 2 CONTENT BÝTÝÞ --- */
+/* --- HEADER 3 CONTENT BAÞLANGIÇ --- */
+
+.neo-logo {
+    width: 40%;
+    height: 100%;
+    margin-left: 153px;
+}
+
+#box {
+    display: flex;
+    width: 680px;
+    position: relative;
+    margin-top: 7px;
+    margin-left: 60px;
+}
+
+::placeholder {
+    font-size: 12px;
+}
+
+#box .fa-search {
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    font-size: 22px;
+    color: #E0E0E0;
+}
+
+#search {
+    width: 550px;
+    box-sizing: border-box;
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 12px 20px 12px 40px;
+    -moz-transition: width 0.4s ease-in-out;
+    -o-transition: width 0.4s ease-in-out;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+    #search:focus::placeholder {
+        opacity: 0.5;
+    }
+
+.search-button {
+    position: flex;
+    background-color: #074793;
+    color: white;
+    width: 60px;
+    border-radius: 2px;
+    border: none;
+    margin-left: -50px;
+    font-family: 'SF Pro Display', arial, sans-serif;
+}
+
+.action-bar {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    font-weight: bolder !important;
+    line-height: 1.5;
+    font-family: 'SF Pro Display', arial, sans-serif;
+    margin-top: 21.3px;
+    margin-left: -52px;
+}
+
+.action-options:hover {
+    color: #074793 !important;
+}
+
+.shopping-bag {
+    transform: scale(3);
+    padding-left: 7px;
+    padding-bottom: 2px;
+    color: #074793;
+}
+
+.action {
+    position: relative;
+}
+
+/* Giriþ Yapma Baþlangýç */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.login-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .login-list a:hover {
+        color: #044794 !important;
+        text-decoration: underline !important;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Giriþ Yapma Bitiþ */
+
+
+.badge {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 3px;
+    border-radius: 100% !important;
+    color: #E10714 !important;
+}
+
+/* --- HEADER 3 CONTENT BÝTÝÞ --- */
+/* --- HEADER 4 CONTENT BAÞLANGIÇ --- */
+
+
+#header-4-content {
+    height: 47px;
+    background-color: #044794 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.category-menu {
+    display: flex !important;
+    list-style-type: none !important;
+    gap: 10px;
+    padding-top: 2px;
+    margin: 30px;
+}
+
+    .category-menu > li > a {
+        font-family: 'SF Pro Display', arial, sans-serif;
+        font-weight: 700 !important;
+        font-size: 12px;
+        color: #FFFFFF !important;
+    }
+
+    .category-menu li:first-child {
+        margin-left: 0;
+    }
+
+    .category-menu li::before {
+        content: "|";
+        color: white;
+        margin: 10px;
+    }
+
+    .category-menu li:first-child::before {
+        content: none;
+    }
+
+/* --- HEADER 4 CONTENT BÝTÝÞ --- */
+/* --- BODY BAÞLANGIÇ --- */
+
+/* KAR YAÐIÞI BÖLÜMÜ */
+
+#snowflakeContainer {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+.snowflake {
+    padding-left: 15px;
+    font-family: Times, Georgia, serif;
+    font-size: 14em;
+    line-height: 24px;
+    position: fixed;
+    color: #ffffff;
+    user-select: none;
+    z-index: 1000;
+}
+
+    .snowflake:hover {
+        cursor: default;
+    }
+
+/* Kar Yaðýþý Bitiþ */
+/* Birinci Slider */
+
+.slide-container {
+    padding-top: 20px;
+}
+
+.carousel-inner {
+    border-radius: 5px;
+}
+
+
+/* Apple Reklam Bölümü */
+
+.apple-adv {
+    background-color: red;
+    border-radius: 5px;
+    height: 48px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+
+.app-text {
+    color: white;
+    font-size: 16px !important;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+.bxs-chevron-right {
+    color: white;
+    padding-left: 220px;
+    font-size: 25px;
+}
+
+
+/* Reklam Sonrasý Kartlýk Bölümü */
+
+.card-group {
+    margin-top: 2px !important;
+    border: none !important;
+    display: flex !important;
+    /* position: relative !important; */
+    flex-wrap: wrap;
+}
+
+.card {
+    border: none !important;
+}
+
+.card-img-img {
+    width: 389px !important;
+    height: 191px !important;
+    border-radius: 50px !important;
+}
+
+/* Vitrin Bölümü  */
+
+.vitrin-genis {
+    margin-top: 30px;
+    font-family: 'SF Pro Display', arial, sans-serif;
+}
+
+.vitrin-product {
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    font-size: 25px;
+    font-weight: 550 !important;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+.see-all {
+    font-weight: bold;
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    color: #074793 !important;
+    text-align: right;
+}
+
+
+#menu {
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.product-category {
+    border: none solid #ccc;
+    padding: 10px;
+    height: 350px;
+    background-color: #F6F6F7;
+}
+
+.menu-buttons {
+    border: none;
+    background-color: #F6F6F7;
+    border-bottom: 2px solid black;
+}
+
+    .menu-buttons:focus {
+        border-bottom: 5px solid #FFD400;
+    }
+
+
+
+.vitrin-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+    .vitrin-list li {
+        display: block;
+        float: left;
+        width: 33.33%;
+        padding: 0;
+        margin: 0;
+    }
+
+.elevate {
+    background: white;
+    height: 300px;
+    margin: 10px;
+    border-radius: 20px;
+    margin-bottom: 8%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    transition: all .5s;
+    &:hover
+{
+    box-shadow: 0 8px 8px rgba(0,0,0,.25);
+    margin: 5px;
+}
+
+}
+
+.elevate img {
+    padding-top: 10px;
+    height: 200px !important;
+    width: auto;
+}
+
+.vitrin-about {
+    padding-top: 5px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.vitrin-product-name {
+    font-weight: bold;
+}
+
+.vitrin-product-price {
+    color: #044794;
+}
+
+
+/* Öne Çýkan Kitaplar Bölümü */
+.featured-products {
+    margin-top: 20px;
+}
+
+.featured-topic {
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    font-size: 25px;
+    font-weight: 550 !important;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+    .featured-topic a {
+        font-family: 'SF Pro Display', arial, sans-serif !important;
+        text-decoration: underline !important;
+    }
+
+
+.featured-see-all {
+    font-weight: bold;
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    color: #074793 !important;
+    text-align: right;
+}
+
+.featured-cover-img {
+    position: absolute;
+    display: grid;
+}
+
+
+/* --- ÖNE ÇIKAN KÝTAPLAR KART KISIMI--- */
+.featured-books {
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    left: calc(50% - 300px);
+    display: flex;
+    margin-top: 17px
+}
+
+.card {
+    display: flex;
+    height: 280px;
+    width: 200px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+}
+
+
+    .card:not(:first-child) {
+        margin-left: -50px;
+    }
+
+    .card:hover {
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+    }
+
+        .card:hover ~ .card {
+            position: relative;
+            left: 50px;
+            transition: 0.4s ease-out;
+        }
+
+.title {
+    font-size: 10px;
+    color: black;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+}
+
+.featured-new {
+    color: white;
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    font-size: 13px;
+    margin-top: 270px;
+    margin-left: 10px;
+    width: 43px;
+    height: 20px;
+    background-color: #074793;
+}
+
+.bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+}
+
+.emptybar {
+    background-color: #2e3033;
+    width: 90%;
+    height: 100%;
+}
+
+.filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0, 154, 217);
+    background: linear-gradient(90deg, rgba(0, 154, 217, 1) 0%, rgba(217, 147, 0, 1) 65%, rgba(255, 186, 0, 1) 100%);
+    transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+}
+
+.circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+}
+
+.stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+}
+
+svg {
+    fill: #17141d;
+    stroke-width: 2px;
+}
+
+.card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+}
+
+
+/* KATALOGLAR BÖLÜMÜ */
+.catalogs {
+    margin-top: 340px;
+}
+
+.col-6,
+.col-3 {
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.catalogs .row {
+    display: flex;
+}
+
+
+/* OYUNCAKLAR BÖLÜMÜ */
+
+.the-most-toys {
+    height: 300px;
+    margin-top: 17px
+}
+
+.toys-topic {
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    font-size: 25px;
+    font-weight: 550 !important;
+    line-height: 1.5;
+    color: #212529;
+}
+
+.toys-see-all {
+    font-weight: bold;
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    color: #074793 !important;
+    text-align: right;
+}
+
+.free-cargo {
+    position: absolute;
+    margin: 10px;
+    padding: 2px;
+    background-color: #FFD400;
+    font-family: 'SF Pro Display', arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+.toys-card {
+    display: flex;
+    gap: 38px;
+}
+
+.toys-1 {
+    width: 250px;
+    background-color: #F9F9FA;
+    height: 440px;
+    transition: box-shadow 0.3s;
+}
+
+.toys-2 {
+    width: 250px;
+    background-color: #F9F9FA;
+    height: 440px;
+    transition: box-shadow 0.3s;
+}
+
+.toys-3 {
+    width: 250px;
+    background-color: #F9F9FA;
+    height: 440px;
+    transition: box-shadow 0.3s;
+}
+
+.toys-4 {
+    width: 250px;
+    background-color: #F9F9FA;
+    height: 440px;
+    transition: box-shadow 0.3s;
+}
+
+.toys-5 {
+    width: 250px;
+    background-color: #F9F9FA;
+    height: 440px;
+    transition: box-shadow 0.3s;
+}
+
+.rat {
+    font-size: 14px;
+    color: #FFD400;
+}
+
+.toys-about {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.toys-rating {
+    font-size: 10px;
+    padding-left: 5px;
+    padding-top: -5px
+}
+
+.toys-img {
+    padding-top: 50px;
+}
+
+.toys-button {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.browse-button {
+    margin-top: 10px;
+    width: 200px;
+    color: white;
+    background-color: #074793;
+    border-radius: 5px;
+}
+
+.toys-1:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.toys-2:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.toys-3:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.toys-4:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.toys-5:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ÝÞ ORTAÐI MARKALAR BÖLÜMÜ */
+
+.brands {
+    margin-top: 200px
+}
+
+    .brands img {
+        max-width: 69px;
+        max-height: 46px;
+    }
+
+.brands-list {
+    list-style-type: none;
+    display: flex;
+    gap: 70px;
+}
+
+
+/* MARKALAR ÝLE MANGA ARASINDAKÝ KARTLAR */
+
+.post-brand-cards .row {
+    display: flex;
+}
+
+.post-brand-cards .col-1,
+.col-3 {
+    flex: 1;
+    /* text-align: center; */
+}
+
+.post-brand-cards img {
+    border-radius: 5px;
+}
+
+
+/* MANGA/ÇÝZGÝ ROMAN BÖLÜMÜ */
+
+.manga-graphic-novels {
+    margin-top: 20px;
+    height: 650px;
+    left: calc(50% - 300px);
+    margin-top: 17px;
+    justify-content: center !important;
+}
+
+.manga-graphic-novels-topic {
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    font-size: 25px;
+    font-weight: 550 !important;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+.manga-graphic-novels-see-all {
+    font-weight: bold;
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    color: #074793 !important;
+    text-align: right;
+}
+
+.manga-card {
+    height: 600px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+    .manga-card .row {
+        padding-left: 10px !important;
+        display: grid;
+        justify-content: space-between;
+        /* width: 100%; */
+        /* GRID mantýðý kullanýldýðý için üçe bölmesi adýna alttaki kodlama yazýldý */
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+.manga-1,
+.manga-2,
+.manga-3 {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.manga-card .col-6 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-manga {
+    width: 384px;
+    height: 576px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: var(--color-primary-white);
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    img
+
+{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+}
+
+h2 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin: 0;
+    transition: inset .3s .3s ease-out;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+p,
+a {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+}
+
+p {
+    inset: auto auto 80px 30px;
+}
+
+a {
+    inset: auto auto 40px 30px;
+    color: inherit;
+    text-decoration: none;
+}
+
+&:hover h2 {
+    inset: auto auto 220px 30px;
+    transition: inset .3s ease-out;
+}
+
+&:hover p,
+&:hover a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+}
+
+&:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 1;
+}
+
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+}
+
+.manga-free-cargo {
+    margin-top: 7.5px;
+    margin-left: 20px;
+    width: 105px;
+    height: 25px;
+    padding-top: 2px;
+    padding-left: 10px;
+    background-color: #FFD400;
+    display: flex;
+    position: absolute;
+    font-family: 'SF Pro Display', arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+.manga-cover {
+    margin-top: 7.5px;
+    margin-left: 150px;
+    width: 100px;
+    height: 25px;
+    padding-top: 2px;
+    padding-left: 19px;
+    color: white;
+    background-color: black;
+    display: flex;
+    position: absolute;
+    font-family: 'SF Pro Display', arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.manga-new {
+    margin-top: 6px;
+    margin-left: 300px;
+    width: 65px;
+    height: 25px;
+    padding-top: 2px;
+    padding-left: 19px;
+    color: white;
+    background-color: #074793;
+    display: flex;
+    position: absolute;
+    font-family: 'SF Pro Display', arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* SON KARTLAR  */
+
+.last-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+    .last-cards .col-4 img {
+        width: 150%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+
+    .last-cards .row {
+        display: flex;
+    }
+
+
+/* HAFTANIN FIRSATLARI BÖLÜMÜ */
+
+.the-weeek-opportunity {
+    padding-top: 20px;
+}
+
+.opportunity-topic {
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    font-size: 25px;
+    font-weight: 550 !important;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+.opportunity-see-all {
+    font-weight: bold;
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    color: #074793 !important;
+    text-align: right;
+}
+
+.bi-arrow-right {
+    fill: #074793;
+}
+
+.gallery-top {
+    display: grid;
+    place-items: center;
+    /* height: 100vh; */
+}
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    max-width: 80rem;
+    margin-left: -50px !important;
+}
+
+.gallery-card {
+    position: relative;
+    left: 0px;
+    width: 6rem;
+    border-radius: 1.2rem;
+    height: 20rem;
+    overflow: hidden;
+    /* background-color: var(--background); */
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    flex: 0.25;
+}
+
+    .gallery-card img {
+        position: relative;
+        height: 20rem;
+        object-fit: cover;
+    }
+
+    .gallery-card:hover {
+        flex: 2;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+
+    .gallery-card:nht-child(1) img {
+        left: -8rem;
+    }
+
+    .gallery-card:nht-child(2) img {
+        left: -6rem;
+    }
+
+    .gallery-card:nht-child(3) img {
+        left: -14rem;
+    }
+
+    .gallery-card:nht-child(4) img {
+        left: -8rem;
+    }
+
+    .gallery-card:nht-child(5) img {
+        left: -6rem;
+    }
+
+
+/* KEÞFET BÖLÜMÜ */
+
+.dr-discover {
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 10px;
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    text-align: center;
+}
+
+.product-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.product-genre {
+    font-family: 'SF Pro Display', arial, sans-serif !important;
+    font-size: 14px;
+}
+
+.product-list li{
+    padding-right:25px;
+}
+
+.product-list img {
+    gap: 10px !important;
+}
+
+/* --- BODY BÝTÝÞ --- */
+/* --- FOOTER BAÞLANGIÇ --- */
+
+footer {
+    margin-top: 50px;
+    font-family: 'SF Pro Display', arial, sans-serif;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-topic {
+    color: #5D5D5D;
+    font-weight: 700 !important;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+footer li {
+    display: flex;
+    color: #7A7A7A;
+    font-size: 14px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* Orijinal Site Footer Üst Sað Kýsmý */
+
+.footer-options ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icon {
+    color: #1A488E;
+    text-align: center;
+}
+
+.footer-options li {
+    text-align: center;
+}
+
+/* Mobil Uygulamalar ve QR Kod Bölümü */
+
+.mobile-app {
+    padding: 0 !important;
+}
+
+.mobile-app-title {
+    color: #767676;
+    font-size: 17px
+}
+
+.mobile-apps ul {
+    list-style-type: none;
+}
+
+.download-img {
+    padding: 15px !important;
+}
+
+.mobile-apps li {
+    display: flex;
+    justify-content: flex-start;
+}
+
+    .mobile-apps li a {
+        margin-bottom: .3rem;
+    }
+
+.download-img li {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.qr-code {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-right: 180px !important;
+}
+
+    .qr-code a {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+/* Sosyal Medya Hesaplarý Bölümü */
+
+.fa-x-twitter {
+    color: #1A488E;
+    padding-right: 2px;
+    padding-bottom: 1px;
+}
+
+.fa-facebook-f {
+    color: #1A488E;
+    padding-right: 1px;
+    padding-bottom: 2px;
+}
+
+.fa-instagram {
+    color: #1A488E;
+    font-size: 20px;
+    padding-top: 1px;
+    padding-right: 1px;
+}
+
+.fa-youtube {
+    color: #1A488E;
+    padding-right: 1px;
+}
+
+.footer-social-links {
+    border-top: 1px solid lightgrey;
+    font-size: 14px;
+    text-align: center;
+}
+
+    .footer-social-links a {
+        width: 25px;
+        height: 25px;
+        line-height: 25px !important;
+        position: relative;
+        margin: 0 5px;
+        text-align: center;
+        display: inline-block;
+        color: #111;
+        -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    }
+
+        .footer-social-links a i,
+        .footer-social-links a span {
+            position: relative;
+            top: 2px;
+            left: 1px;
+        }
+
+        .footer-social-links a:before {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #111;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+            -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+            -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+            -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+            transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+        }
+
+        .footer-social-links a:hover {
+            color: #fff;
+        }
+
+            .footer-social-links a:hover:before {
+                background: #111;
+            }
+
+
+/* Sosyal Medyadan Takip Bölümü Bitiþ */
+
+.social-media-title {
+    color: #5D5D5D !important;
+}
+
+.footer-finish {
+    padding-top: 30px;
+}
+
+.footer-finish-law-link {
+    color: #707070 !important;
+}
+
+.footer-finish-law-text {
+    color: #707070 !important;
+    font-size: 11px;
+}
+
+
+/* KAYAN YAZI BÖLÜMÜ */
+
+..position-relative {
+    position-top:fixed;
+}
+
+.slide-text-container {
+    margin-top: 10px;
+    border-top: 2px groove #1A488E;
+    border-bottom: 2px groove #1A488E;
+}
+
+.slide-text-container {
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    .slide-text
+
+{
+    top: 0;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    animation: slide-text 30s linear infinite;
+}
+
+.slide-text2 {
+    animation-delay: 15s;
+}
+
+b {
+    padding-left: 10px;
+}
+
+}
+
+@keyframes slide-text {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100%
+    }
+}
+
+
+/*Payment - VIP Üye View Ekraný*/
+
+.credit-card {
+    animation: slide 3s infinite;
+}
+
+.coin1 {
+    animation: drop 3s infinite;
+}
+
+.coin2 {
+    animation: drop 6s infinite;
+}
+
+.coin3 {
+    animation: drop 8s infinite;
+}
+
+@keyframes drop {
+    0% {
+        transform: translate3d(50px, 50px, 0px);
+    }
+
+    50% {
+        transform: translate3d(25px, 500px, 0px);
+    }
+
+    100% {
+        transform: translate3d(0px, 800px, 0px);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0%, 40px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    10% {
+        transform: translate3d(10%, 90px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    20% {
+        transform: translate3d(20%, 40px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    30% {
+        transform: translate3d(30%, 90px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        transform: translate3d(40%, 40px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        transform: translate3d(50%, 90px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    60% {
+        transform: translate3d(60%, 40px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    70% {
+        transform: translate3d(70%, 90px, 0px);
+    }
+
+    80% {
+        transform: translate3d(80%, 40px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        transform: translate3d(90%, 90px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translate3d(100%, 40px, 0px);
+        animation-timing-function: ease-in;
+    }
+}

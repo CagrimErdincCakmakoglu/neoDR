@@ -1,0 +1,54 @@
+﻿@using neoDR.Data.Entities
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model List<Category>
+
+<h1 style="margin-top:20px; padding-bottom:20px;">Category Index</h1>
+
+<div>@TempData["Message"]</div>
+
+<div class="container">
+    <div class="col-2 mt-2 text-end">
+        <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
+            <i class="fa fa-plus"></i>
+            Kategori Ekle
+        </a>
+    </div>
+
+    <table class="table table-bordered mt-3" style="border-color:gray;">
+        <thead>
+
+            <tr>
+                <th class="text-white" style="text-align:center; background-color:#044794;">
+                    Kategorinin İsmi
+                </th>
+                <th class="text-white" style="text-align:center;background-color:#044794;">
+                    Kategorinin Açıklaması
+                </th>
+
+                <th class="text-black" style="text-align:center;background-color:red;">
+                    İŞLEMLER
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style=" font-weight:bolder; text-align:center; padding-top:13px;">@item.Name </td>
+                    <td style="padding-top:13px;">@item.Description</td>
+                    <td style="text-align:center;">
+                        <a asp-controller="Category" asp-action="Update" asp-route-id="@item.Id" class="btn btn-secondary">Düzenle</a>
+                        <a asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+

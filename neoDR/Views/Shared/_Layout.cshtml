@@ -1,0 +1,547 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&R - Kültür, Sanat ve Eğlence Dünyası</title>
+    <link rel="stylesheet" href="/css/site.css" />
+    <!-- Alttaki BOOTSTRAP referans linki -->
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Alttaki sitenin FAVICON yolu -->
+    <link rel="shortcut icon" href="https://i.dr.com.tr/themes/prod/DRTheme//images/favicon.ico" type="image/x-icon" />
+    <!-- Alttaki FONT FAMILY referans linki -->
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
+    <!-- Alttaki BOX ICONS referans linki. Platin Üye Ol öncesi yıldız için -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="lib/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Alttaki FONT AWESOME referans linki. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Alttaki FONT AWESOME referans linki. Üsttekinden versiyon farklı (Footer Sipariş takip icon için kullanıldı) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Alttaki KART bölümünde kullanılan referans linki -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <!-- Alltaki MANGA KART bölümünde kullanılan referans linki -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Alttaki BOOTSTRAP link ve scriptler (3 tanesi) slide için kullanıldı -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Alttaki BAŞKA SEKMEYE GEÇİNCE DEĞİŞEN TİTLE için JS -->
+    <script type="text/javascript">
+        var focusTitle = document.title;
+        var anotherPageTitle = "Buraya Bakmalısınız :)";
+
+        window.onblur = function () {
+            document.title = anotherPageTitle;
+        }
+
+        window.onfocus = function () {
+            document.title = focusTitle;
+        }
+    </script>
+</head>
+
+<body>
+    <header id="header-container">
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="add-part">
+                <div class="row">
+                    <div class="add-product col-4">
+                        <a href="/Product/Index">Product Index</a>
+                    </div>
+
+                    <div class="add-category col-4">
+                        <a href="/Category/Index">Category Index</a>
+                    </div>
+
+                    <div class="add-category col-4">
+                        <a href="/Account/Index">Account Index</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+        <div class="header-1-content">
+            <a href="#" target="_blank">
+                <img src="/image/neoBanner.webp">
+            </a>
+        </div>
+
+        <div class="header-2-content">
+            <div class="row">
+                <div class="col-2 vip">
+                    @if (User.IsInRole("Admin") || User.IsInRole("VIP"))
+                    {
+                       <span style="font-weight:bolder; padding-left:20px;">Teşekkürler, VIP üyesiniz!</span>
+
+                    }else
+                    {
+                        <a href="/Account/BeVIPMember" target="_blank" class="vip-member">
+                            <i class='bx bxs-star'></i>&nbsp;PLATİN ÜYE OL
+                        </a>
+                    }
+
+                </div>
+
+                <div class="col-6">
+                    <ul class="navbar-list">
+                        <li>
+                            <a class="list-items" href="#">Yurt Dışından Kitap</a>
+                        </li>
+                        <li>
+                            <a class="list-items" href="#">Hediye Kartı</a>
+                        </li>
+                        <li>
+                            <a class="list-items" href="#">Markalar</a>
+                        </li>
+                        <li>
+                            <a class="list-items" href="#">Yayınevleri</a>
+                        </li>
+                        <li>
+                            <a class="list-items" href="#">Yazarlar</a>
+                        </li>
+                        <li>
+                            <a class="list-items" href="#">Mağaza Etkinlikleri</a>
+                        </li>
+                        <li>
+                            <a class="list-items" href="#">Mağazalar</a>
+                        </li>
+                        <li>
+                            <a class="list-items" href="#">Sipariş Takip</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="call-button" onclick="callCustomerService()">
+                                <ul class="call-center-list">
+                                    <li>
+                                        <img class="icon-support" src="/image/callcentericon.png">
+                                    </li>
+
+                                    <li class="number-item">
+                                        <span class="call-number">
+                                            &nbsp; +90 (850) 266
+                                            3737
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="message-button" onclick="sendWhatsAppMessage()">
+                                <ul class="send-message-list">
+                                    <li>
+                                        <i class='bx bxl-whatsapp'></i>
+                                    </li>
+                                    <li class="material3">
+                                        <span class="whatsapp-text">Whatsapp</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-3-content">
+            <div class="row">
+                <div class="col-2">
+                    <a href="/Home">
+                        <img class="neo-logo" src="/image/neoDrLogo.png">
+                    </a>
+                </div>
+
+                <div class="col-6 part-of-search">
+                    <form>
+                        <div id="box">
+                            <input type="text" id="search" maxlength="50" value autocomplete="off"
+                                   placeholder="Kitap, Elektronik, Oyuncak, Kırtasiyede ürün, kategori ve marka ara… ">
+                            <i class="fa fa-search"></i>
+                            <button class="search-button" type="submit">ARA</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-4">
+                    <ul class="action-bar">
+                        <li><a class="action-options" href="#">Favori Listem</a></li>
+                        <li><a class="action-options" href="#">Kampanyalar</a></li>
+                        <li>
+
+                            <div class="dropdown">
+                                <span class="action-options">
+                                    Üye İşlemleri
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         width="16" height="16" fill="currentColor" class="bi bi-chevron-down"
+                                         viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                                <div class="dropdown-content">
+                                    <ul class="login-list">
+                                        @if (User.Identity.Name != null)
+                                        {
+                                            <li><a href="/Account/LogOut">Çıkış Yap</a></li>
+                                        } else
+                                        {
+                                            <li><a href="/Account/Login">Giriş Yap</a></li>
+                                            <li><a href="/Account/Register">Üye Ol</a></li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+
+                        <li>
+                            <a class="action-options" href="#">
+                                Sepetim
+                                <svg class="shopping-bag"
+                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-cart2" viewBox="0 0 16 16">
+                                    <path stroke="currentColor" stroke-width="0.33"
+                                          d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                                </svg>
+                            </a><span class="badge text-bg-danger">0</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="header-4-content">
+            <ul class="category-menu">
+                <li><a href="#">KİTAP</a></li>
+                <li><a href="#">DERS KİTAPLARI</a></li>
+                <li><a href="#">ELEKTRONİK</a></li>
+                <li><a href="#">BİLGİSAYAR,TABLET</a></li>
+                <li><a href="#">ELEKTRİKLİ EV ALETLERİ</a></li>
+                <li><a href="#">HOBİ,OYUNCAK</a></li>
+                <li><a href="#">ANNE,BEBEK</a></li>
+                <li><a href="#">OFİS,KIRTASİYE</a></li>
+                <li><a href="#">MÜZİK,HEDİYELİK</a></li>
+                <li><a href="#">SPOR,OUTDOOR</a></li>
+            </ul>
+        </div>
+        <script src="/pages/index.js"></script>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="footer" class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <!-- Footer Sol Üst Satır Başlangıcı -->
+                    <div class="col-1"></div>
+                    <div class="footer-part-1 col-2 ">
+                        <h5 class="footer-topic">Kitap</h5>
+                        <ul class="footer-list">
+                            <li>e-Kitap</li>
+                            <li>Edebiyat</li>
+                            <li>Çocuk ve Gençlik</li>
+                            <li>Eğitim Başvuru</li>
+                            <li>Araştırma ve Tarih</li>
+                            <li>Ders ve Sınav Kitapları</li>
+                            <li>Çizgi Roman</li>
+                            <li>Foreign Languages</li>
+                            <li>Yurt Dışından Kitap</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-part-2 col-2">
+                        <h5 class="footer-topic">Elektronik</h5>
+                        <ul class="footer-list">
+                            <li>Cep Telefonu</li>
+                            <li>Bilgisayar Tablet</li>
+                            <li>Oyun Aksesuarları</li>
+                            <li>Foto & Kamera</li>
+                            <li>Ev Elektroniği</li>
+                            <li>Kulaklıklar</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-part-3 col-2">
+                        <h5 class="footer-topic">Elektrikli Ev Aletleri</h5>
+                        <ul class="footer-list">
+                            <li>Küçük Ev Aletleri</li>
+                            <li>Kişisel Bakım & Sağlık</li>
+                            <li>Isıtma ve Soğutma</li>
+                            <li>Akıllı Ev Elektroniği</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-part-4 col-2">
+                        <h5 class="footer-topic">Anne Bebek</h5>
+                        <ul class="footer-list">
+                            <li>Bebek Arabaları</li>
+                            <li>Bebek Beslenme Ürünleri</li>
+                            <li>Süt Pompaları</li>
+                            <li>Biberon & Emzik</li>
+                            <li>Mama Sandalyesi</li>
+                            <li>Buhar Makinesi</li>
+                            <li>Bebek Kamerası</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-part-5 col-3">
+                        <h5 class="footer-topic">Hobi Oyuncak</h5>
+                        <ul class="footer-list">
+                            <li>Puzzlelar</li>
+                            <li>Eğitim Oyuncakları</li>
+                            <li>Birleştir ve Oyna Setleri</li>
+                            <li>Figürler</li>
+                            <li>0-3 Yaş Oyuncakları</li>
+                            <li>Hobi</li>
+                            <li>Kutu Oyunları</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Sol Alt Satır Başlangıcı -->
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="footer-part-1 col-2 ">
+                        <h5 class="footer-topic">Kırtasiye</h5>
+                        <ul class="footer-list">
+                            <li>Kalemler</li>
+                            <li>Defterler</li>
+                            <li>Okul Çantası & Matara</li>
+                            <li>Sanatsal Malzemeler</li>
+                            <li>Ofis Teknolojileri</li>
+                            <li>Termos ve Mataralar</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-part-2 col-2">
+                        <h5 class="footer-topic">Müzik</h5>
+                        <ul class="footer-list">
+                            <li>Yabancı Albümler</li>
+                            <li>Yerli Albümler</li>
+                            <li>Pikaplar</li>
+                            <li>Müzik Aletleri</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-part-3 col-2">
+                        <h5 class="footer-topic">Yardım / İletişim</h5>
+                        <ul class="footer-list">
+                            <li>Siparişler</li>
+                            <li>Teslimat ve Kargo</li>
+                            <li>Fatura</li>
+                            <li>Sipariş İptali</li>
+                            <li>İade İşlemleri</li>
+                            <li>e-Kitap</li>
+                            <li>Ödeme Yöntemleri</li>
+                            <li>Hediye Kartları</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-part-4 col-2">
+                        <h5 class="footer-topic">Editörden Seçimler</h5>
+                        <ul class="footer-list">
+                            <li>Keşfet</li>
+                            <li>Harry Potter</li>
+                            <li>1001 Kitap</li>
+                            <li>Ödüllü Kitaplar</li>
+                            <li>Sizin İçin Seçtiklerimiz</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-part-5 col-3">
+                        <h5 class="footer-topic">Kurumsal</h5>
+                        <ul class="footer-list">
+                            <li>D&R Hakkında</li>
+                            <li>İnternet Sitesi Üyeliği</li>
+                            <li>Aydınlatma Metni</li>
+                            <li>İnternet Sitesi Çerez</li>
+                            <li>Bilgilendirme Metni</li>
+                            <li>D&R Mağazalar</li>
+                            <li>Mağaza Dijital Kart Üyeliği</li>
+                            <li>Mağaza Dijital Kart</li>
+                            <li>Aydınlatma Metni</li>
+                            <li>Mağaza Dijital Kart Üyelik Sözleşmesi</li>
+                            <li>D&R Mağaza Etkinlikleri</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orijinal Site Footer Üst Sağ Kısmı -->
+            <div class="last-part">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="footer-options col-5">
+                        <ul>
+                            <li>
+                                <ul>
+                                    <a href="#">
+                                    <li>
+                                        <i class="fa-solid fa-store footer-icon"
+                                           style="padding-left: 23px;"></i>
+                                    </li>
+                                    <li class="last-text">Mağazalar</li>
+                                    </a>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <a href="#">
+                                    <li>
+                                        <i class="fa-solid fa-headset footer-icon"
+                                           style="padding-left: 39px;"></i>
+                                    </li>
+                                    <li class="last-text">0850 266 37 37</li>
+                                    </a>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <a href="#">
+                                    <li>
+                                        <i class="fa-solid fa-truck-moving footer-icon"
+                                           style="padding-left: 27px;"></i>
+                                    </li>
+                                    <li class="last-text">Sipariş Takip</li>
+                                    </a>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <a href="#">
+                                    <li>
+                                        <i class="fa-solid fa-envelope-open-text footer-icon"
+                                           style="padding-left: 25px;"></i>
+                                    </li>
+                                    <li class="last-text">Whatsapp</li>
+                                    </a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <!-- Mobil Uygulamalar ve QR Kod Bölümü -->
+                    <div class="mobile-app col-5">
+                        <h5 class="mobile-app-title">Mobil Uygulamalar</h5>
+                        <div class="row">
+                            <div class="mobile-apps col-6">
+                                <ul class="download-img">
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://i.dr.com.tr/pimages/Content/Uploads/LandingPage/frontend-assets/new_footer_appstore.webp">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://i.dr.com.tr/pimages/Content/Uploads/LandingPage/frontend-assets/new_footer_googleplay.webp">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="qr-code col-6">
+                                <a href="#">
+                                    <img class="qr-code-img" style="width: 70px; height: auto;"
+                                         src="https://i.dr.com.tr/pimages/Content/Uploads/LandingPage/frontend-assets/etbis_dr-2.webp">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sosyal Medya Hesapları Bölümü -->
+            <div class="footer-social-links">
+                <div>
+                    <h5 class="social-media-title">Sosyal Medya Adreslerimiz</h5>
+                    <div>
+                        <a href="https://twitter.com/DRdunyasi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                           title="Twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/DRdunyasi/?locale=tr_TR" title="Facebook"
+                           target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/dr_dunyasi/" title="Instagran" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/user/DRDunyasi" title="YouTube" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-finish">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="https://i.dr.com.tr/pimages/Content/Uploads/LandingPage/frontend-assets/new_footer_logo.webp">
+                    </div>
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="https://e-sirket.mkk.com.tr/?page=company&company=10740" target="_blank" class="footer-finish-law-link">
+                                    <span class="footer-finish-law-text" style="text-decoration: underline;">
+                                        Bilgi
+                                        Toplumu Hizmetleri
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="https://www.dr.com.tr/kisisel-verilere-iliskin-aydinlatma-metni" target="_blank" class="footer-finish-law-link">
+                                    <span class="footer-finish-law-text" style="text-decoration: underline;">
+                                        Kişisel
+                                        Verilere İlişkin Aydınlatma Metni
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="footer-finish-law-text">
+                                © Copyright 2000- 2024 Turkuvaz Müzik Kitap
+                                Mağazacılık ve Pazarlama A.Ş. Tüm hakları saklıdır.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-5" style="padding-left: 6.25rem;">
+                        <img src="https://i.dr.com.tr/pimages/Content/Uploads/LandingPage/frontend-assets/payment-types-new1_1.webp">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="position-relative slide-text-container d-none d-sm-block">
+            <div class="slide-text d-flex justify-content-around">
+                <span><b>Bu bir <u>Çağrım Erdinç ÇAKMAKOĞLU</u> projesidir!</b></span>
+            </div>
+            <div class="slide-text slide-text2 d-flex justify-content-around">
+                <span><b>Bu bir <u>Çağrım Erdinç ÇAKMAKOĞLU</u> projesidir!</b></span>
+            </div>
+        </div>
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿@using neoDR.Data.Entities
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@model Product
+
+<h1>Ürün Ekle</h1>
+
+<form class="container" method="post" asp-controller="Product" asp-action="Create">
+    <div class="mb-3">
+        <label class="form-label">Ürün İsmi</label>
+        <input asp-for="Name" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kitap Yazarı</label>
+        <input asp-for="Author" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kitap Yayımcısı</label>
+        <input asp-for="Publisher" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kitap Sayfa Sayısı</label>
+        <input asp-for="Pages" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ürün Fiyatı</label>
+        <input asp-for="Price" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ürün Stok Sayısı</label>
+        <input asp-for="Stock" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ürün Kategorisi</label>
+        <select class="form-control" asp-for="CategoryId">
+            <option value="" selected>Kategoriler</option>
+            @foreach (var item in (List<Category>)ViewBag.Categories)
+            {
+                <option value="@item.Id">@item.Name </option>
+            }
+        </select>
+        <span asp-validation-for="Category"></span>
+    </div>
+
+    <button type="submit" onclick="gosterGizle()" class="btn btn-primary">Kaydet</button>
+</form>
+
+
+
+

@@ -1,0 +1,25 @@
+﻿@using neoDR.Data.Entities
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@model Category
+
+<h1>Kategori Ekle</h1>
+
+<form class="container" method="post" asp-controller="Category" asp-action="Create">
+    <div class="mb-3">
+        <label class="form-label">Kategorinin ismi</label>
+        <input asp-for="Name" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kategorinin Açıklaması</label>
+        <input asp-for="Description" type="text" class="form-control" />
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+

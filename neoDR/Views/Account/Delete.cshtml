@@ -1,0 +1,28 @@
+﻿@using neoDR.Data.Entities
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@model User
+
+<h1>Üyelik Silme</h1>
+
+<div class="container">
+    <div class="card mt-2">
+        <div class="card-header bg-primary text-white">
+            <h3>Üyelik Silme İşlemi</h3>
+        </div>
+
+        <div class="card-body">
+            @Model.Name kayıtlı üyeyi silmek istediğinizden emin misiniz?
+        </div>
+
+        <div class="card-footer">
+            <form method="post" asp-controller="Account" asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <button class="btn btn-success" type="submit">Sil</button>
+                <a asp-controller="Account" asp-action="Index" class="btn btn-primary">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>

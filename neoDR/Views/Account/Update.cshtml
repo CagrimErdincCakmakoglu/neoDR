@@ -1,0 +1,45 @@
+﻿@using neoDR.Data.Entities
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+@model User
+
+<h1>Kullanıcı Bilgisi Güncelleme</h1>
+
+<form class="container" method="post" asp-controller="Account" asp-action="Update">
+
+    <div class="mb-3">
+        <label class="form-label">Kullanıcı ismi</label>
+        <input asp-for="Name" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kullanıcı soyadı</label>
+        <input asp-for="Surname" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kullanıcı maili</label>
+        <input asp-for="Email" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kullanıcı şifresi</label>
+        <input asp-for="Password" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kullanıcı telefonu</label>
+        <input asp-for="Phone" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kullanıcı doğum tarihi</label>
+        <input asp-for="BirthDate" type="text" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+

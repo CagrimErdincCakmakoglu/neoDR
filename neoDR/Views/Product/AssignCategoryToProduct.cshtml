@@ -1,0 +1,40 @@
+﻿@using neoDR.Data.Entities
+@{
+    ViewData["Title"] = "AssignCategoryToProduct";
+}
+
+<h1>AssignCategoryToProduct</h1>
+
+@model Product
+
+<div class="container">
+    <form asp-controller="Product" asp-action="AssignCategoryToProduct" method="post">
+        <div class="mb-3">
+            <label>Atama Yapmak İstediğiniz Ürünü Seçiniz:</label>
+            <select class="form-control" asp-for="Id">
+                <option value="" selected>Ürünler</option>
+                @foreach (var item in (List<Product>)ViewBag.Products)
+                {
+                    <option value="@item.Id">@item.Name </option>
+                }
+            </select>
+            <span asp-validation-for="Id"></span>
+
+
+        </div>
+
+        <div class="mb-3">
+            <label>Atama Yapmak İstediğiniz Kategoriyi Seçiniz:</label>
+            <select class="form-control" asp-for="CategoryId">
+                <option value="" selected>Kategoriler</option>
+                @foreach (var item in (List<Category>)ViewBag.Categories)
+                {
+                    <option value="@item.Id">@item.Name </option>
+                }
+            </select>
+            <span asp-validation-for="CategoryId"></span>
+        </div>
+
+        <input class="btn btn-success" type="submit" value="Kaydet" />
+    </form>
+</div>

@@ -1,0 +1,25 @@
+﻿@using neoDR.Data.Entities
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+@model Category
+
+<h1>Kategori Güncelleme</h1>
+
+<form class="container" method="post" asp-controller="Category" asp-action="Update">
+
+    <div class="mb-3">
+        <label class="form-label">Kategori ismi</label>
+        <input asp-for="Name" type="text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Kategori Açıklaması</label>
+        <input asp-for="Description" type="text" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+

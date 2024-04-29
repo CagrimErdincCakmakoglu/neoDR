@@ -1,0 +1,73 @@
+﻿@using neoDR.Data.Entities
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model List<Product>
+
+<h1 style="margin-top:20px; padding-bottom:20px;">Product Index</h1>
+
+<div>@TempData["Message"]</div>
+
+<div class="container">
+    <div class="col-2 mt-2 text-end">
+        <a asp-controller="Product" asp-action="Create" class="btn btn-primary">
+            <i class="fa fa-plus"></i>
+            Ürün Ekle
+        </a>
+    </div>
+
+
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th class="text-white" style="text-align:center; background-color:#044794;">
+                    <b>Ürün İsmi</b>
+                </th>
+                <th class="text-white" style="text-align:center; background-color:#044794;">
+                    Kitap Yazarı
+                </th>
+                <th class="text-white" style="text-align:center; background-color:#044794;">
+                    Kitap Yayımcısı
+                </th>
+                <th class="text-white" style="text-align:center; background-color:#044794;">
+                    Ürün Kategori ID'si
+                </th>
+                <th class="text-white" style="text-align:center; background-color:#044794;">
+                    Kitap Sayfa Sayısı
+                </th>
+                <th class="text-white" style="text-align:center; background-color:#044794;">
+                    Ürün Fiyatı
+                </th>
+                <th class="text-white" style="text-align:center; background-color:#044794;">
+                    Ürün Stok Sayısı
+                </th>
+                <th class="text-white" style="text-align:center; background-color:red;">
+                    İşlemler
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="padding-top:13px;"><b>@item.Name</b></td>
+                    <td style="padding-top:13px;">@item.Author</td>
+                    <td style="padding-top:13px;">@item.Publisher</td>
+                    <td style="padding-top:13px;">@item.CategoryId</td>
+                    <td style="padding-top:13px;">@item.Pages </td>
+                    <td style="padding-top:13px;">@item.Price</td>
+                    <td style="padding-top:13px;">@item.Stock</td>
+                    <td>
+                        <a asp-controller="Product" asp-action="Update" asp-route-id="@item.Id" class="btn btn-secondary">Düzenle</a>
+                        <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
