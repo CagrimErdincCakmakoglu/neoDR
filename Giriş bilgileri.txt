@@ -1,0 +1,10 @@
+Merhaba,
+Controller'lara ulaşabilmek için admin yetkisine sahip üyelik ile girmek şarttır.
+Onun için lütfen alttaki üye girişini kullanınız.
+Lütfen verilmiş database'i, MSSQL ile açıp proje içinde bulunan "ProjectContext" (Data>Context) kısmındakki bilgileri kendinize göre ayarlayınız.
+Admin ile giriş yaptığınızda sayfasının header'ının en üstünde sadece Admin'in gördüğü yetki panel yönlendirmesi olan bölüm vardır.
+Yorulmadan her şeye oradan ulaşabilirsiniz :)
+
+Kullanıcı Adı : Admin
+Şifre	      : Trabzon.45
+
